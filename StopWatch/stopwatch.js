@@ -22,28 +22,18 @@ function displayTimer(){
             hours++;
         }
     }
-
-    // Keeps it from going to 99:99:99 & makes it double digits
-    if (seconds < 10) {
-        displaySeconds = "0" + seconds.toString();  
-      } else {
-          displaySeconds = seconds;
-      }
-    if (minutes < 10) {
-        displayMinutes = "0" + minutes.toString();  
-      } else {
-        displayMinutes = minutes;
-      }
-    if (hours < 10) {
-        displayHours = "0" + hours.toString();  
-      } else {
-        displayHours = hours;
-    }
-
-    // Shows time in UI
-    timer.innerHTML = displayHours + ":" + displayMinutes + ":" + displaySeconds;
-   
+    timer.innerHTML = printNumber(hours) + ":" + printNumber(minutes) + ":" + printNumber(seconds);
 };
+
+function printNumber(num){
+  if (num < 10) {
+    return "0" + num.toString();
+  } else {
+    return num;
+  }
+};
+
+
 
 // START BUTTON
 const startButton = document.getElementById("start");
