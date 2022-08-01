@@ -33,8 +33,6 @@ function printNumber(num){
   }
 };
 
-
-
 // START BUTTON
 const startButton = document.getElementById("start");
 

@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-auto-rows: minmax(100, auto);
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+
+.btn-equals {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+}
+
+.input, .results {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
